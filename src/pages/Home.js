@@ -15,6 +15,7 @@ function Home() {
                     {/*    Link*/}
                     {/*    Link*/}
                     {/*    Icon*/}
+                    {/*    Avatar*/}
                 </div>
             </div>
             <div className="home_body">
