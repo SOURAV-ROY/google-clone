@@ -6,7 +6,7 @@
     z-index: 100;
     align-items: flex-start;
     padding: 30px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgreen;
 }
 
 .searchPage_logo {
@@ -16,6 +16,14 @@
 }
 
 .searchPage_headerBody > .search > .search_input {
+    border: 1px solid green;
+    margin-top: 0;
+    width: unset;
+    margin: unset;
+    max-width: unset;
+}
+.searchPage_headerBody > .search > .search_input:hover {
+    border: 1px solid lightgreen;
     margin-top: 0;
     width: unset;
     margin: unset;
@@ -49,4 +57,44 @@
 
 .searchPage_option a {
     margin-left: 5px;
+}
+
+.searchPage_result {
+    margin: 30px 0;
+}
+
+.searchPage_resultCount {
+    color: #70757a;
+    font-size: 16px;
+}
+
+.searchPage_results {
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: 240px;
+    margin-bottom: 100px;
+}
+
+.searchPage_resultImage {
+    border: 1px solid lightseagreen;
+    object-fit: contain;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.searchPage_resultTitle {
+    text-decoration: none;
+}
+
+.searchPage_resultTitle:hover {
+    text-decoration: underline;
+}
+
+.searchPage_resultTitle > h2 {
+    font-weight: 500;
+}
+
+.searchPage_resultSnippet {
+    margin-top: 10px;
 }

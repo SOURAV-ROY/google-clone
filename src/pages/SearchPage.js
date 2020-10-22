@@ -2,7 +2,7 @@ import React from 'react';
 import "./SearchPage.css";
 import {useStateValue} from "../StateProvider/StateProvider";
 import useGoogleSearch from "../useGoogleSearch";
-import Response from "../response";
+// import Response from "../response";
 import {Link} from "react-router-dom";
 import Search from "../components/Search";
 import SearchIcon from '@material-ui/icons/Search';
@@ -14,12 +14,13 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 function SearchPage() {
 
+    // eslint-disable-next-line no-unused-vars
     const [{term}, dispatch] = useStateValue();
 
     //LIVE API Call *****************************************
-    // const {data} = useGoogleSearch(term);
+    const {data} = useGoogleSearch(term);
 
-    const data = Response;
+    // const data = Response;
 
     // https://cse.google.com/cse/create/new
     console.log(data);
@@ -79,9 +80,41 @@ function SearchPage() {
                     </div>
                 </div>
             </div>
-            <div className="searchPage_results">
 
-            </div>
+            {term && (
+                <div className="searchPage_results">
+
+                    <p className="searchPage_resultCount">
+                        About {data?.searchInformation.formattedTotalResults} results
+                        ({data?.searchInformation.formattedSearchTime} seconds) for {term}
+                    </p>
+
+                    {data?.items.map(item => (
+                        <div className="searchPage_result">
+                            {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                            <a href={item.link} target="_blank">
+                                {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                                    <img
+                                        className="searchPage_resultImage"
+                                        src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src}
+                                        alt=''
+                                    />
+                                )}
+                                {item.displayLink} ✔
+                            </a>
+                            {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                            <a className="searchPage_resultTitle" href={item.link} target="_blank">
+                                <h2>{item.title}</h2>
+                            </a>
+                            <p className="searchPage_resultSnippet">
+                                {item.snippet}
+                            </p>
+                            <hr/>
+                        </div>
+                    ))}
+
+                </div>
+            )}
         </div>
     );
 }
