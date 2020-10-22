@@ -23,7 +23,7 @@
     max-width: unset;
 }
 .searchPage_headerBody > .search > .search_input:hover {
-    border: 1px solid lightgreen;
+    border: 1px solid #54c485;
     margin-top: 0;
     width: unset;
     margin: unset;

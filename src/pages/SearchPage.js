@@ -2,7 +2,7 @@ import React from 'react';
 import "./SearchPage.css";
 import {useStateValue} from "../StateProvider/StateProvider";
 import useGoogleSearch from "../useGoogleSearch";
-// import Response from "../response";
+import Response from "../response";
 import {Link} from "react-router-dom";
 import Search from "../components/Search";
 import SearchIcon from '@material-ui/icons/Search';
@@ -18,9 +18,9 @@ function SearchPage() {
     const [{term}, dispatch] = useStateValue();
 
     //LIVE API Call *****************************************
-    const {data} = useGoogleSearch(term);
+    // const {data} = useGoogleSearch(term);
 
-    // const data = Response;
+    const data = Response;
 
     // https://cse.google.com/cse/create/new
     console.log(data);
