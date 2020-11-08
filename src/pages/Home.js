@@ -19,7 +19,10 @@ function Home() {
                     <Link to="/gmail">Gmail</Link>
                     <Link to="/images">Images</Link>
                     <AppsIcon/>
-                    <Avatar/>
+                    <Avatar
+                        src="https://lh3.googleusercontent.com/a-/AOh14GiAtdWYpX5yMarWgdlpDfi4c1ECcOVePjvQHUtM"
+                        style={{border: "1px solid green"}}
+                    />
                 </div>
             </div>
             <div className="home_body">

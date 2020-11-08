@@ -1,7 +1,7 @@
 .search_input {
     display: flex;
     align-items: center;
-    border: 1px solid lightgrey;
+    border: 1px solid lightgreen;
     height: 30px;
     padding: 10px 20px;
     border-radius: 999px;
@@ -9,6 +9,10 @@
     margin: 0 auto;
     margin-top: 40px;
     max-width: 560px;
+}
+
+.search_input:hover {
+    border: 1px solid lightseagreen;
 }
 
 .search_input > input {

@@ -14,11 +14,12 @@
 .home_header a {
     margin-right: 20px;
     text-decoration: inherit;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(0, 0, 0, 0.8);
     font-size: 15px;
 }
 
 .home_header a:hover {
+    color: darkcyan;
     text-decoration: underline;
 }
 
